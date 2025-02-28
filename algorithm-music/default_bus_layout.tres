@@ -1,0 +1,26 @@
+[gd_resource type="AudioBusLayout" load_steps=5 format=3 uid="uid://c1bvwfre6tmxd"]
+
+[sub_resource type="AudioEffectReverb" id="AudioEffectReverb_7nqjs"]
+resource_name = "Reverb"
+room_size = 0.95
+wet = 0.8
+
+[sub_resource type="AudioEffectCompressor" id="AudioEffectCompressor_jksnm"]
+resource_name = "Compressor"
+ratio = 48.0
+
+[sub_resource type="AudioEffectFilter" id="AudioEffectFilter_t7pdc"]
+resource_name = "Filter"
+
+[sub_resource type="AudioEffectLowPassFilter" id="AudioEffectLowPassFilter_7lpjf"]
+resource_name = "LowPassFilter"
+
+[resource]
+bus/0/effect/0/effect = SubResource("AudioEffectReverb_7nqjs")
+bus/0/effect/0/enabled = true
+bus/0/effect/1/effect = SubResource("AudioEffectCompressor_jksnm")
+bus/0/effect/1/enabled = true
+bus/0/effect/2/effect = SubResource("AudioEffectFilter_t7pdc")
+bus/0/effect/2/enabled = true
+bus/0/effect/3/effect = SubResource("AudioEffectLowPassFilter_7lpjf")
+bus/0/effect/3/enabled = true
